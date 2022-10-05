@@ -9,6 +9,7 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - checkout
+      - run: npm i
       - run:  npm run lint
 
 
@@ -18,6 +19,7 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - checkout
+      - run: npm i
       - run:  npm run test
     
   analyze:
@@ -25,6 +27,7 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - checkout
+      - run: npm i
       - run: npm audit
   
 workflows:
